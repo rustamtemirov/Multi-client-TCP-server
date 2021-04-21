@@ -62,7 +62,7 @@ int main()
             while (1)
             {
                 // while client doesnt send "exit", recieve and send reversed text
-                int currentSize = 100000;
+                unsigned long int currentSize = 100000;
                 char *string = malloc(currentSize);
                 currentSize = recvAll(new_socket, string, currentSize);
                 if (strcmp(string, "exit") == 0)

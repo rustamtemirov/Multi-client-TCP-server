@@ -25,7 +25,7 @@ unsigned long int longScanf(char *string, unsigned long long len_max)
     return current_size;
 }
 
-int sendAll(int network_socket, const char *string, int string_length)
+int sendAll(int network_socket, const char *string, unsigned long int string_length)
 {
 
     int bytes_sent;
@@ -43,12 +43,12 @@ int sendAll(int network_socket, const char *string, int string_length)
     return 1;
 }
 
-int recvAll(int network_socket, char *string, int string_length)
+unsigned long int recvAll(int network_socket, char *string, unsigned long int string_length)
 {
-    int count = 0;
+    unsigned long int count = 0;
     int dataLength = 0;
-    int currentSize = string_length;
-    int oldSize = currentSize;
+    unsigned long int currentSize = string_length;
+    unsigned long int oldSize = currentSize;
     dataLength = recv(network_socket, string + count, 100000, 0);
     count += dataLength;
     while (dataLength > currentSize)

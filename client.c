@@ -44,7 +44,7 @@ int main()
         free(client_message);
 
         //receive the data from the server
-        int currentSize = 100000;
+        unsigned long int currentSize = 100000;
         char *server_response = malloc(currentSize);
         recvAll(network_socket, server_response, currentSize);
 
