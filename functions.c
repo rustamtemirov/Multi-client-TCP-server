@@ -50,7 +50,7 @@ int recvAll(int network_socket, char *string, int string_length)
     int currentSize = string_length;
     int oldSize = currentSize;
     dataLength = recv(network_socket, string + count, 100000, 0);
-    i += dataLength;
+    count += dataLength;
     while (dataLength > currentSize)
     {
         dataLength = recv(network_socket, string + count, 100000, 0);
