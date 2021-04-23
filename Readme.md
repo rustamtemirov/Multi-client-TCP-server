@@ -35,4 +35,8 @@ make -f MakeFile clean
 ```
 
 ## Roadmap
+<<<<<<< HEAD
 There are some other features like authentication, menu, admin are expected to be added in the future.
+=======
+There are some other features like authentication, menu, admin are expected to be added in the future.
+>>>>>>> e6b9f57b97b7a02bd6ba98c81713bef6ce297eed
