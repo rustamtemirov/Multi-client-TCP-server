@@ -1,7 +1,7 @@
 # Line-Reversing Server
 
 ## Description
-TCP server that receives line-delimited input from client, then reverses and sends back the input line. Server supports line lengths of at least 4 GiB and can server multiple clients simultaneously. 
+TCP server that receives line-delimited input from client, then reverses and sends back the input line. Server supports line lengths of at least 4 GiB and can server multiple clients simultaneously. Operates on Linux OS 
 
 ## Installation
 
