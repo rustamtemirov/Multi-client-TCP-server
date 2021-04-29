@@ -39,6 +39,7 @@ int main()
         //Send the data to the server
         unsigned long int len_max = MAX;
         char *client_message = malloc(len_max);
+
         len_max = longScanf(client_message, len_max);
         sendAll(network_socket, client_message, len_max);
         free(client_message);
@@ -46,6 +47,7 @@ int main()
         //receive the data from the server
         unsigned long int currentSize = 100000;
         char *server_response = malloc(currentSize);
+        memset(server_response, '\0', currentSize);
         recvAll(network_socket, server_response, currentSize);
 
         if (strcmp(server_response, "exit") == 0)
